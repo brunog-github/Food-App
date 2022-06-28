@@ -96,12 +96,13 @@
                     android:id="@+id/heart_textView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
                     android:setNumberOfLikes="@{result.aggregateLikes}"
                     android:textAlignment="center"
                     android:textColor="@color/red"
                     app:layout_constraintStart_toStartOf="@+id/description_TextView"
                     app:layout_constraintTop_toBottomOf="@+id/heart_imageView"
-                    tools:text="100" />
+                    tools:text="10" />
 
                 <ImageView
                     android:id="@+id/clock_imageView"
@@ -117,7 +118,7 @@
                     android:id="@+id/clock_textView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="24dp"
+                    android:layout_marginStart="32dp"
                     android:setNumberOfMinutes="@{result.readyInMinutes}"
                     android:textAlignment="center"
                     android:textColor="@color/yellow"
@@ -139,10 +140,10 @@
                     android:id="@+id/leaf_textView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="24dp"
+                    android:layout_marginStart="16dp"
                     android:hasVegan="@{result.vegan}"
-                    android:textAlignment="center"
                     android:text="Vegan"
+                    android:textAlignment="center"
                     app:layout_constraintStart_toEndOf="@+id/clock_textView"
                     app:layout_constraintTop_toBottomOf="@+id/leaf_imageView"
                     tools:text="Vegan" />
