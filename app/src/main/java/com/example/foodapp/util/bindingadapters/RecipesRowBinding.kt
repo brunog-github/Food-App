@@ -1,4 +1,4 @@
-package com.example.foodapp.util
+package com.example.foodapp.util.bindingadapters
 
 import android.view.View
 import android.widget.ImageView
