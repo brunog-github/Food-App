@@ -1,4 +1,4 @@
-package com.example.foodapp
+package com.example.foodapp.viewmodels
 
 import android.app.Application
 import android.content.Context
@@ -10,12 +10,12 @@ import androidx.lifecycle.viewModelScope
 import com.example.foodapp.data.Repository
 import com.example.foodapp.models.FoodRecipe
 import com.example.foodapp.util.NetworkResult
-import dagger.hilt.android.scopes.ViewModelScoped
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import retrofit2.Response
 import javax.inject.Inject
 
-@ViewModelScoped
+@HiltViewModel
 class MainViewModel @Inject constructor(
     private val repository: Repository,
     application: Application
