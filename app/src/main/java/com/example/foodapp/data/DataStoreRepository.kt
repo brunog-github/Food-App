@@ -2,10 +2,12 @@ package com.example.foodapp.data
 
 import android.content.Context
 import androidx.datastore.core.DataStore
+import androidx.datastore.dataStore
 import androidx.datastore.preferences.core.*
 import androidx.datastore.preferences.preferencesDataStore
 import com.example.foodapp.util.Constants.DEFAULT_DIET_TYPE
 import com.example.foodapp.util.Constants.DEFAULT_MEAL_TYPE
+import com.example.foodapp.util.Constants.PREFERENCES_BACK_ONLINE
 import com.example.foodapp.util.Constants.PREFERENCES_DIET_TYPE
 import com.example.foodapp.util.Constants.PREFERENCES_DIET_TYPE_ID
 import com.example.foodapp.util.Constants.PREFERENCES_MEAL_TYPE
@@ -29,6 +31,8 @@ class DataStoreRepository @Inject constructor(
 
         val selectedDietType = stringPreferencesKey(PREFERENCES_DIET_TYPE)
         val selectedDietTypeId = intPreferencesKey(PREFERENCES_DIET_TYPE_ID)
+
+        val backOnline = booleanPreferencesKey(PREFERENCES_BACK_ONLINE)
     }
 
     private val Context.dataStore: DataStore<Preferences>
@@ -45,6 +49,12 @@ class DataStoreRepository @Inject constructor(
             preferences[PreferenceKeys.selectedMealTypeId] = mealTypeId
             preferences[PreferenceKeys.selectedDietType] = dietType
             preferences[PreferenceKeys.selectedDietTypeId] = dietTypeId
+        }
+    }
+
+    suspend fun saveBackOnline(backOnline: Boolean) {
+        context.dataStore.edit { preferences ->
+            preferences[PreferenceKeys.backOnline] = backOnline
         }
     }
 
@@ -69,6 +79,19 @@ class DataStoreRepository @Inject constructor(
                 selectedDietType,
                 selectedDietTypeId
             )
+        }
+
+    val readBackOnline: Flow<Boolean> = context.dataStore.data
+        .catch { exception ->
+            if (exception is IOException) {
+                emit(emptyPreferences())
+            } else {
+                throw exception
+            }
+        }
+        .map { preferences ->
+            val backOnline = preferences[PreferenceKeys.backOnline] ?: false
+            backOnline
         }
 }
 
