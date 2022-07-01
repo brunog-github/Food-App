@@ -24,4 +24,6 @@
     <color name="chip_default_background_color">@color/lightGray</color>
     <color name="checked_chip_text_color">@color/purple_500</color>
     <color name="chip_default_text_color">@color/darkGray</color>
+
+    <color name="action_bar_background_color">@color/purple_500</color>
 </resources>
