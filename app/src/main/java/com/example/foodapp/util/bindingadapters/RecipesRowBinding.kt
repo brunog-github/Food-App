@@ -12,6 +12,7 @@ import coil.load
 import com.example.foodapp.R
 import com.example.foodapp.models.Result
 import com.example.foodapp.ui.fragments.recipes.RecipesFragmentDirections
+import org.jsoup.Jsoup
 
 object RecipesRowBinding {
 
@@ -63,6 +64,15 @@ object RecipesRowBinding {
                     view.setColorFilter(ContextCompat.getColor(view.context, R.color.green))
                 }
             }
+        }
+    }
+
+    @BindingAdapter("android:parseHtml")
+    @JvmStatic
+    fun parseHtml(textView: TextView, description: String?) {
+        if (description != null) {
+            val desc = Jsoup.parse(description).text()
+            textView.text = desc
         }
     }
 }
