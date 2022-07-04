@@ -8,6 +8,6 @@ import com.example.foodapp.util.Constants.FAVORITES_RECIPES_TABLE
 @Entity(tableName = FAVORITES_RECIPES_TABLE)
 data class FavoriteEntity(
     @PrimaryKey(autoGenerate = true)
-    var id: Int,
+    var id: Int = 0,
     var result: Result
 )
