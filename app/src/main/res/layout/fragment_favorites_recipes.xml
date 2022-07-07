@@ -4,9 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <variable
             name="mainViewModel"
             type="com.example.foodapp.viewmodels.MainViewModel" />
+
         <variable
             name="adapter"
             type="com.example.foodapp.adapters.FavoriteRecipeAdapter" />
@@ -25,6 +27,8 @@
             android:layout_height="0dp"
             android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
+            android:setData="@{adapter}"
+            android:viewVisibility="@{mainViewModel.readFavoriteRecipes}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -36,6 +40,7 @@
             android:layout_height="100dp"
             android:alpha="0.5"
             android:src="@drawable/ic_menu_book"
+            android:viewVisibility="@{mainViewModel.readFavoriteRecipes}"
             android:visibility="invisible"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -52,6 +57,7 @@
             android:text="@string/no_favorite_recipes"
             android:textSize="18sp"
             android:textStyle="bold"
+            android:viewVisibility="@{mainViewModel.readFavoriteRecipes}"
             android:visibility="invisible"
             app:layout_constraintEnd_toEndOf="@+id/no_data_imageView"
             app:layout_constraintStart_toStartOf="@+id/no_data_imageView"
