@@ -5,6 +5,7 @@ import android.view.*
 import androidx.fragment.app.Fragment
 import android.widget.Toast
 import androidx.appcompat.widget.SearchView
+import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
@@ -24,23 +25,17 @@ import kotlinx.coroutines.launch
 @AndroidEntryPoint
 class RecipesFragment : Fragment(), SearchView.OnQueryTextListener {
 
-    private lateinit var mainViewModel: MainViewModel
-    private lateinit var recipesViewModel: RecipesViewModel
-
     private var _binding: FragmentRecipesBinding? = null
     private val binding get() = _binding!!
+
+    private val mainViewModel: MainViewModel by viewModels()
+    private val recipesViewModel: RecipesViewModel by viewModels()
 
     private val adapter by lazy { RecipesAdapter() }
 
     private val args by navArgs<RecipesFragmentArgs>()
 
     private lateinit var networkListener: NetworkListener
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        mainViewModel = ViewModelProvider(requireActivity())[MainViewModel::class.java]
-        recipesViewModel = ViewModelProvider(requireActivity())[RecipesViewModel::class.java]
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

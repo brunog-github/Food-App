@@ -6,12 +6,13 @@
         <entry key="..\:/Users/Bruno/AndroidStudioProjects/FoodApp/app/src/main/res/drawable/gradient_overlay.xml" value="0.4755" />
         <entry key="..\:/Users/Bruno/AndroidStudioProjects/FoodApp/app/src/main/res/drawable/ic_error_placeholder.xml" value="0.341" />
         <entry key="..\:/Users/Bruno/AndroidStudioProjects/FoodApp/app/src/main/res/drawable/ic_food_joke.xml" value="0.341" />
+        <entry key="..\:/Users/Bruno/AndroidStudioProjects/FoodApp/app/src/main/res/drawable/ic_food_joke_background_light.xml" value="0.283" />
         <entry key="..\:/Users/Bruno/AndroidStudioProjects/FoodApp/app/src/main/res/font/courgette.xml" value="0.5630208333333333" />
         <entry key="..\:/Users/Bruno/AndroidStudioProjects/FoodApp/app/src/main/res/layout/activity_details.xml" value="0.4703125" />
         <entry key="..\:/Users/Bruno/AndroidStudioProjects/FoodApp/app/src/main/res/layout/activity_main.xml" value="0.5171875" />
         <entry key="..\:/Users/Bruno/AndroidStudioProjects/FoodApp/app/src/main/res/layout/favorite_recipes_row_layout.xml" value="0.46822916666666664" />
         <entry key="..\:/Users/Bruno/AndroidStudioProjects/FoodApp/app/src/main/res/layout/fragment_favorites_recipes.xml" value="0.4703125" />
-        <entry key="..\:/Users/Bruno/AndroidStudioProjects/FoodApp/app/src/main/res/layout/fragment_food_joke.xml" value="0.41574074074074074" />
+        <entry key="..\:/Users/Bruno/AndroidStudioProjects/FoodApp/app/src/main/res/layout/fragment_food_joke.xml" value="0.5171875" />
         <entry key="..\:/Users/Bruno/AndroidStudioProjects/FoodApp/app/src/main/res/layout/fragment_ingredients.xml" value="0.4703125" />
         <entry key="..\:/Users/Bruno/AndroidStudioProjects/FoodApp/app/src/main/res/layout/fragment_instructions.xml" value="0.4703125" />
         <entry key="..\:/Users/Bruno/AndroidStudioProjects/FoodApp/app/src/main/res/layout/fragment_item_list_dialog_list_dialog.xml" value="0.5171875" />
@@ -25,6 +26,7 @@
         <entry key="..\:/Users/Bruno/AndroidStudioProjects/FoodApp/app/src/main/res/menu/details_menu.xml" value="0.4703125" />
         <entry key="..\:/Users/Bruno/AndroidStudioProjects/FoodApp/app/src/main/res/menu/favorite_contextual_menu.xml" value="0.5171875" />
         <entry key="..\:/Users/Bruno/AndroidStudioProjects/FoodApp/app/src/main/res/menu/favorite_recipes_menu.xml" value="0.46822916666666664" />
+        <entry key="..\:/Users/Bruno/AndroidStudioProjects/FoodApp/app/src/main/res/menu/food_joke_menu.xml" value="0.4703125" />
         <entry key="..\:/Users/Bruno/AndroidStudioProjects/FoodApp/app/src/main/res/menu/recipes_menu.xml" value="0.4703125" />
       </map>
     </option>
