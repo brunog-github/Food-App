@@ -13,6 +13,7 @@ import com.example.foodapp.R
 import com.example.foodapp.databinding.FragmentOverviewBinding
 import com.example.foodapp.models.Result
 import com.example.foodapp.util.Constants.RECIPE_RESULT_KEY
+import com.example.foodapp.util.bindingadapters.RecipesRowBinding
 import org.jsoup.Jsoup
 
 class OverviewFragment : Fragment() {
@@ -28,20 +29,17 @@ class OverviewFragment : Fragment() {
         _binding = FragmentOverviewBinding.inflate(inflater, container, false)
 
         val args = arguments
-        val myBundle: Result? = args?.getParcelable(RECIPE_RESULT_KEY)
+        val myBundle: Result = args!!.getParcelable<Result>(RECIPE_RESULT_KEY) as Result
 
         binding.apply {
-            mainImageView.load(myBundle?.image)
-            titleTextView.text = myBundle?.title
-            likesTextView.text = myBundle?.aggregateLikes.toString()
-            timeTextView.text = myBundle?.readyInMinutes.toString()
+            mainImageView.load(myBundle.image)
+            titleTextView.text = myBundle.title
+            likesTextView.text = myBundle.aggregateLikes.toString()
+            timeTextView.text = myBundle.readyInMinutes.toString()
 
-            myBundle?.summary?.let {
-                val summary = Jsoup.parse(it).text()
-                summaryTextView.text = summary
-            }
+            RecipesRowBinding.parseHtml(binding.summaryTextView, myBundle?.summary)
 
-            myBundle?.apply {
+            myBundle.apply {
                 if (vegetarian) setColorDietsOption(vegetarianImageView, vegetarianTextView)
                 if (vegan) setColorDietsOption(veganImageView, veganTextView)
                 if (glutenFree) setColorDietsOption(glutenFreeImageView, glutenFreeTextView)
