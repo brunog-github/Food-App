@@ -3,7 +3,9 @@ package com.example.foodapp.util.bindingadapters
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.core.view.isVisible
 import androidx.databinding.BindingAdapter
+import androidx.room.RoomDatabase
 import com.example.foodapp.data.database.models.RecipesEntity
 import com.example.foodapp.models.FoodRecipe
 import com.example.foodapp.util.NetworkResult
@@ -12,30 +14,19 @@ object RecipesBinding {
 
     @BindingAdapter("android:readApiResponse", "android:readDatabase", requireAll = true)
     @JvmStatic
-    fun errorImageVisibility(
-        view: ImageView,
+    fun handleReadDataErrors(
+        view: View,
         apiResponse: NetworkResult<FoodRecipe>?,
         database: List<RecipesEntity>?
     ) {
-        if (apiResponse is NetworkResult.Error && database.isNullOrEmpty()) {
-            view.visibility = View.VISIBLE
-        } else {
-            view.visibility = View.INVISIBLE
-        }
-    }
-
-    @BindingAdapter("android:readApiResponse2", "android:readDatabase2", requireAll = true)
-    @JvmStatic
-    fun errorTextViewVisibility(
-        view: TextView,
-        apiResponse: NetworkResult<FoodRecipe>?,
-        database: List<RecipesEntity>?
-    ) {
-        if (apiResponse is NetworkResult.Error && database.isNullOrEmpty()) {
-            view.visibility = View.VISIBLE
-            view.text = apiResponse.message.toString()
-        } else {
-            view.visibility = View.INVISIBLE
+        when(view) {
+            is ImageView -> {
+                view.isVisible = apiResponse is NetworkResult.Error && database.isNullOrEmpty()
+            }
+            is TextView -> {
+                view.isVisible = apiResponse is NetworkResult.Error && database.isNullOrEmpty()
+                view.text = apiResponse?.message.toString()
+            }
         }
     }
 }
