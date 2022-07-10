@@ -62,6 +62,7 @@ class DetailsActivity : AppCompatActivity() {
             this
         )
 
+        binding.viewPager2.isUserInputEnabled = false
         binding.viewPager2.adapter = pagerAdapter
 
         TabLayoutMediator(binding.tabLayout, binding.viewPager2) { tab, position ->
