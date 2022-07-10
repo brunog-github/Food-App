@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Colors of Project -->
+    <color name="lightGray">#F9F9F9</color>
+    <color name="mediumGray">#D1D1D1</color>
+    <color name="lightMediumGray">#80D1D1D1</color>
+    <color name="darkGray">#4B4B4B</color>
+    <color name="dark">#313C44</color>
+    <color name="darker">#151B20</color>
+    <color name="red">#FF4646</color>
+    <color name="yellow">#FFC114</color>
+    <color name="green">#00C980</color>
+
+    <!-- DARK THEME COLORS -->
+    <color name="backgroundColor">@color/dark</color>
+    <color name="placeholderColor">@color/darker</color>
+    <color name="itemColor">@color/mediumGray</color>
+
+    <!-- Custom Chip Style -->
+    <color name="checked_chip_background_color">@color/dark</color>
+    <color name="chip_default_background_color">@color/darker</color>
+    <color name="checked_chip_text_color">@color/lightGray</color>
+    <color name="chip_default_text_color">@color/lightGray</color>
+
+    <!-- Custom CardView Style -->
+    <color name="card_background_light_color">#106200EE</color>
+    <color name="stroke_color">@color/mediumGray</color>
+    <color name="card_background_color">@color/darker</color>
+    <color name="title_color">@color/mediumGray</color>
+    <color name="descriptionColor">@color/mediumGray</color>
+
+    <color name="status_bar_color">@color/black</color>
+    <color name="contextual_status_bar_color">@color/black</color>
+    <color name="contextual_action_bar_color">@color/darker</color>
+    <color name="action_bar_background_color">@color/darker</color>
+
+    <!-- Custom BottomNavigation Style -->
+    <color name="bottomNavBackground">@color/darker</color>
+    <color name="bottomNavItemColor">@color/mediumGray</color>
+    <color name="bottomNavCheckedItemColor">@color/purple_200</color>
+</resources>

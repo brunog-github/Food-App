@@ -5,12 +5,14 @@
     android:id="@+id/details_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
     tools:context=".ui.DetailsActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/action_bar_background_color"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -19,7 +21,7 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:titleTextColor="@color/white"/>
+            app:titleTextColor="@color/white" />
 
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tabLayout"
@@ -27,7 +29,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:layout_scrollFlags="scroll|enterAlways"
-            app:tabTextColor="@color/white"/>
+            app:tabTextColor="@color/white" />
 
     </com.google.android.material.appbar.AppBarLayout>
 

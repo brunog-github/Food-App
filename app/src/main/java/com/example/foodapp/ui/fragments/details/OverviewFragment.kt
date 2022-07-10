@@ -37,7 +37,7 @@ class OverviewFragment : Fragment() {
             likesTextView.text = myBundle.aggregateLikes.toString()
             timeTextView.text = myBundle.readyInMinutes.toString()
 
-            RecipesRowBinding.parseHtml(binding.summaryTextView, myBundle?.summary)
+            RecipesRowBinding.parseHtml(binding.summaryTextView, myBundle.summary)
 
             myBundle.apply {
                 if (vegetarian) setColorDietsOption(vegetarianImageView, vegetarianTextView)

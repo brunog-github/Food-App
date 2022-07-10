@@ -16,7 +16,7 @@
         <item name="colorOnSecondary">@color/black</item>
 
         <item name="colorControlNormal">@color/white</item>
-        <item name="android:statusBarColor">@color/purple_700</item>
+        <item name="android:statusBarColor">@color/status_bar_color</item>
     </style>
 
     <style name="CustomTabLayoutStyle" parent="Widget.Design.TabLayout">
@@ -24,5 +24,19 @@
         <item name="tabIndicatorColor">@color/white</item>
         <item name="tabIndicatorHeight">2dp</item>
         <item name="tabSelectedTextColor">@color/white</item>
+    </style>
+
+    <style name="CustomActionBarStyle" parent="Widget.MaterialComponents.ActionBar.Primary">
+        <item name="background">@color/action_bar_background_color</item>
+    </style>
+
+    <style name="CustomBottomNavigationView" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="backgroundTint">@color/bottomNavBackground</item>
+        <item name="itemIconTint">@color/bottom_nav_item_color</item>
+        <item name="itemTextColor">@color/bottom_nav_item_color</item>
+    </style>
+
+    <style name="CustomButtonStyle" parent="Widget.AppCompat.Button">
+        <item name="backgroundTint">@color/purple_500</item>
     </style>
 </resources>

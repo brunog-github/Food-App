@@ -19,19 +19,31 @@
     <color name="yellow">#FFC114</color>
     <color name="green">#00C980</color>
 
+    <!-- LIGHT THEME COLORS -->
+    <color name="backgroundColor">@color/lightGray</color>
+    <color name="placeholderColor">@color/mediumGray</color>
+    <color name="itemColor">@color/darker</color>
+
     <!-- Custom Chip Style -->
     <color name="checked_chip_background_color">#206200EA</color>
     <color name="chip_default_background_color">@color/lightGray</color>
     <color name="checked_chip_text_color">@color/purple_500</color>
     <color name="chip_default_text_color">@color/darkGray</color>
 
-    <color name="action_bar_background_color">@color/purple_500</color>
+    <!-- Custom CardView Style -->
     <color name="stroke_color">@color/lightMediumGray</color>
     <color name="card_background_color">@color/white</color>
+    <color name="card_background_light_color">#106200EE</color>
     <color name="title_color">@color/darker</color>
+    <color name="descriptionColor">@color/darkGray</color>
 
     <color name="status_bar_color">@color/purple_500</color>
     <color name="contextual_status_bar_color">@color/darker</color>
     <color name="contextual_action_bar_color">@color/dark</color>
-    <color name="card_background_light_color">#106200EE</color>
+    <color name="action_bar_background_color">@color/purple_500</color>
+
+    <!-- Custom BottomNavigation Style -->
+    <color name="bottomNavBackground">@color/white</color>
+    <color name="bottomNavItemColor">@color/darkGray</color>
+    <color name="bottomNavCheckedItemColor">@color/purple_500</color>
 </resources>
